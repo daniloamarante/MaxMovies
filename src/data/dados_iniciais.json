@@ -3,7 +3,7 @@
     {
       "titulo": "Valorant GamePlay",
       "link": "https://www.youtube.com/c/TenZCS/featured",
-      "cor": "#6BD1FF",
+      "cor": "#00FF00",
       "link_extra": {
         "text": "Conferir Todas  as GamePlays",
         "url": "https://www.youtube.com/channel/UCckPYr9b_iVucz8ID1Q67sw"
@@ -11,10 +11,10 @@
       "videos": [
         {
           "titulo": "O que faz uma desenvolvedora front-end? #HipstersPontoTube",
-          "url": "https://www.youtube.com/watch?v=ZY3-MFxVdEw"
+          "url": "https://youtu.be/lChSYMuYYgw"
         },
         {
-          "titulo": "SEO com React",
+          "titulo": "Max of Death CF",
           "url": "https://www.youtube.com/watch?v=c8mVlakBESE"
         },
         {
