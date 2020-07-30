@@ -10,7 +10,7 @@ function CadastroCategoria() {
         cor: ''
     };
    
-    const [Categorias, setCategorias] = useState([]);  
+    const [categorias, setCategorias] = useState([]);  
     const [values, setValues] = useState(valoresIniciais);
     
     function setValue(chave, valor){
@@ -35,11 +35,11 @@ function CadastroCategoria() {
       <form  onSubmit={function handleSubmit(evento){
           evento.preventDefault();
           setCategorias([
-            ...Categorias,  
+            ...categorias,  
             values
           ]);
 
-          setValues({valoresIniciais});
+          setValues(valoresIniciais);
       }}>
           <div>
               
@@ -85,7 +85,7 @@ function CadastroCategoria() {
       </form>
 
       <ul>
-          {Categorias.map((categoria,indice)=>{
+          {categorias.map((categoria,indice)=>{
               return(
                   <li key={`${categoria} ${indice}`}>
                       {categoria.nome}
