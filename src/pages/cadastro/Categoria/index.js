@@ -29,16 +29,15 @@ function CadastroCategoria() {
   }
 
   useEffect(() => {
-        const URL = window.location.hostname.includes('localhost')
-        ? 'http://localhost:8080'
-        : 'https://https://maxmovies.herokuapp.com/categorias';
-      fetch(URL)
-        .then(async (respostaDoServidor) => {
-         const resposta = await respostaDoServidor.json();
-            setCategorias([...resposta]);            
-        
-        });
+    const URL = window.location.hostname.includes('localhost')
+      ? 'http://localhost:8080'
+      : 'https://https://maxmovies.herokuapp.com/categorias';
+    fetch(URL)
+      .then(async (respostaDoServidor) => {
+        const resposta = await respostaDoServidor.json();
+        setCategorias([...resposta]);
       });
+  });
 
   return (
     <PageDefault>
@@ -86,6 +85,12 @@ function CadastroCategoria() {
           Cadastrar
         </Button>
       </form>
+
+      {categorias.length === 0 && (
+      <div>
+        Loading...
+      </div>
+      )}
 
       <ul>
         {categorias.map((categoria) => (
