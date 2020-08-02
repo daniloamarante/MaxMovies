@@ -1,10 +1,9 @@
 /* eslint-disable linebreak-style */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
-
 
 function CadastroCategoria() {
   const valoresIniciais = {
@@ -28,6 +27,18 @@ function CadastroCategoria() {
     setValue(evento.target.getAttribute('name'),
       evento.target.value);
   }
+
+  useEffect(() => {
+        const URL = window.location.hostname.includes('localhost');
+        ? "http://localhost:8080"
+        : "htttp://https://maxmovies.herokuapp.com/categorias";
+      fetch(URL)
+        .then(async (respostaDoServidor) => {
+         const resposta = await respostaDoServidor.json();
+            setCategorias([...resposta]);            
+        
+        });
+    ));
 
   return (
     <PageDefault>
@@ -77,7 +88,7 @@ function CadastroCategoria() {
       </form>
 
       <ul>
-        {categorias.map((categoria,) => (
+        {categorias.map((categoria) => (
           <li key={`${categoria.nome}`}>
             {categoria.nome}
           </li>
