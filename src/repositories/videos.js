@@ -1,6 +1,5 @@
 import config from '../config';
 
-//const URL_VIDEOS = `${config.URL}/videos` //voce estava pegando a propriedade URL e voce exportou URL_BACKEND
 
 const URL_VIDEOS = `${config.URL_BACKEND}/videos`; 
 
