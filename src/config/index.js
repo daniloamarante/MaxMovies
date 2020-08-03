@@ -1,7 +1,7 @@
-const URL = window.location.hostname.includes('localhost')
+const URL_BACKEND = window.location.hostname.includes('localhost')
   ? 'http://localhost:8080'
-  : 'https://https://maxmovies.herokuapp.com';
+  : 'https://maxmovies.herokuapp.com/';
 
 export default {
-  URL,
+  URL_BACKEND,
 };
