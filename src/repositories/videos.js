@@ -1,12 +1,14 @@
 import config from '../config';
 
-const URL_VIDEOS = `${config.URL}/videos`;
+//const URL_VIDEOS = `${config.URL}/videos` //voce estava pegando a propriedade URL e voce exportou URL_BACKEND
+
+const URL_VIDEOS = `${config.URL_BACKEND}/videos`; 
 
 function create(objetoDoVideo) {
-  return fetch(`${URL_VIDEOS}?_embed=videos`, {
+  return fetch(`${URL_VIDEOS}`, {
     method: 'POST',
     headers: {
-      'Content-type': 'application/json',
+      'content-type': 'application/json',
     },
     body: JSON.stringify(objetoDoVideo),
   })
