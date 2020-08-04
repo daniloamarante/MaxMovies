@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Button = styled.button`
 color: var(--white);
 border: 1px solid var(--white);
-background: var(--black);
+background: linear-gradient(#20B2AA,#32CD32,#006400);
 box-sizing: border-box;
 cursor: pointer;
 padding: 16px 24px;
@@ -18,7 +18,7 @@ transition: opacity .3s;
 
 &:hover,
 &:focus {
-opacity: .5;
+opacity: .9;
 };
 
 `

@@ -4,14 +4,13 @@ import { FooterBase } from './styles';
 function Footer() {
   return (
     <FooterBase>
-      <a href="https://www.alura.com.br/">
-        <img src="https://www.alura.com.br/assets/img/alura-logo-white.1570550707.svg" alt="Logo Alura" />
-      </a>
+      <h1>Max Movies</h1>
+     
       <p>
-        Orgulhosamente criado durante a
+        &#169; Todos os direitos reservados
         {' '}
-        <a href="https://www.alura.com.br/">
-          Imersão React da Alura
+        <a href="#">
+          
         </a>
       </p>
     </FooterBase>
