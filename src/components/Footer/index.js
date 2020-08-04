@@ -8,10 +8,6 @@ function Footer() {
      
       <p>
         &#169; Todos os direitos reservados
-        {' '}
-        <a href="#">
-          
-        </a>
       </p>
     </FooterBase>
   );
